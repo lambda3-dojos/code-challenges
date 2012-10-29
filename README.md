@@ -1,7 +1,7 @@
 Code Challenges
 ===============
 
-Este é um repositório público para armazenar os algoritmos da sessão de desafio de programação realizadas as quartas-feiras na Lambda3.
+Este é um repositório público para armazenar os algoritmos das sessões de desafio de programação realizadas as quartas-feiras na Lambda3.
 
 Todos os interessados são bem vindos a participar.
 
