@@ -8,3 +8,5 @@ TestResults
 # Mac files
 .DS_Store
 
+# Ignore text files
+*.txt
