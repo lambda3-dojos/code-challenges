@@ -1,0 +1,4 @@
+Para rodar:
+
+export JAVA_OPTS="-Xmx512m -XX:+UseCompressedOops" && scala RemoveDuplicates.scala
+
