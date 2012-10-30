@@ -59,12 +59,12 @@ def generate_hashes
 end
 
 start = Time.now
-puts generate_hashes
-unrepeated_lines = map_repetitions.
-	map { |code, line_numbers| line_numbers[0]}.flatten
+#puts generate_hashes
+#unrepeated_lines = map_repetitions.
+#	map { |code, line_numbers| line_numbers[0]}.flatten
 
 #File.open("good.txt", "w") { |f| f.puts unrepeated_lines}
-#unrepeated_lines = File.read("good.txt").split("\n").map(&:to_i)
+unrepeated_lines = File.read("good.txt").split("\n").map(&:to_i)
 
 File.delete("final.txt") if File.exists?("final.txt")
 File.open("final.txt", "a") do |f|
@@ -75,8 +75,9 @@ File.open("final.txt", "a") do |f|
 		chunck_end += lines.size
 		if unrepeated_lines.first < chunck_end
 			indexes = (chunck_start..chunck_end).to_a & unrepeated_lines[0, 650]
-			f.puts indexes.map { |i| lines[i] }
+			f.puts indexes.map { |i| lines[i - chunck_start] }
 			unrepeated_lines = unrepeated_lines[indexes.size..-1]
+			#puts unrepeated_lines.size
 		end
 	end
 end
